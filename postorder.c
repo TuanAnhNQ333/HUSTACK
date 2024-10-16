@@ -56,9 +56,9 @@ void postOrder(struct Node * root)
 {
     if(root != NULL)
     {
-        printf("%d ", root -> key);
-        postOrder(root -> right);
         postOrder(root -> left);
+        postOrder(root -> right);
+        printf("%d ", root -> key);
     }
 }
 int main()
@@ -75,11 +75,40 @@ int main()
         }
         if(strncmp(command, "insert", 6) == 0)
         {
+            int key;
             sscanf(command + 7, "%d", &key);
             root = insert(root, key);
         }
-        preOrder(root);
-        postOrder(root);
+        else if(strncmp(command, "preorder", 8) == 0)
+        {
+            preOrder(root);
+           
+            printf("\n");
+        }
+        else if(strncmp(command, "postorder", 9) == 0)
+        {
+            postOrder(root);
+            
+            printf("\n");
+        }
     }
     return 0;
 }
+/*
+Example
+Input
+insert 5
+insert 9
+insert 2
+insert 1
+preorder
+insert 8
+insert 5
+insert 3
+postorder
+#
+
+Output
+5 2 1 9
+1 3 2 8 9 5
+*/

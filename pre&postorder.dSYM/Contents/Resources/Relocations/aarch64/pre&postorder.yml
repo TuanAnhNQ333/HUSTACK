@@ -1,0 +1,11 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/macbook/Documents/HUSTACK code/pre&postorder'
+relocations:
+  - { offset: 0x26, size: 0x8, addend: 0x0, symName: _newNode, symObjAddr: 0x0, symBinAddr: 0x100003C70, symSize: 0x48 }
+  - { offset: 0x7A, size: 0x8, addend: 0x0, symName: _newNode, symObjAddr: 0x0, symBinAddr: 0x100003C70, symSize: 0x48 }
+  - { offset: 0xB0, size: 0x8, addend: 0x0, symName: _insert, symObjAddr: 0x48, symBinAddr: 0x100003CB8, symSize: 0xC8 }
+  - { offset: 0xE6, size: 0x8, addend: 0x0, symName: _preOrder, symObjAddr: 0x110, symBinAddr: 0x100003D80, symSize: 0x6C }
+  - { offset: 0x10A, size: 0x8, addend: 0x0, symName: _postOrder, symObjAddr: 0x17C, symBinAddr: 0x100003DEC, symSize: 0x6C }
+  - { offset: 0x12E, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x1E8, symBinAddr: 0x100003E58, symSize: 0xF8 }
+...

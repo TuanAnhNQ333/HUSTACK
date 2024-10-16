@@ -19,7 +19,7 @@ struct Node * newNode(int item)
 // ham chen 1 khoa vao binary search tree
 struct Node* insert(struct Node*node, int key)
 {
-    // neu cay rong, tra ve nut moiz
+    // neu cay rong, tra ve nut moi
     if(node == NULL) return newNode(key);
     // duyet cay de chen
     if(key < node->key)
