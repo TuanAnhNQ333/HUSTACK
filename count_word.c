@@ -9,44 +9,38 @@ Write the number Q of words
 
 #include<stdio.h>
 #include<string.h>
-#include<ctype.h> // dùng cho hàm isspace()
+#include<ctype.h> // for isspace
 
-// Hàm đếm số từ trong chuỗi
 int countWords(char *s)
 {
-    int wordCount = 0;  // Biến đếm số từ
-    int inWord = 0;     // Biến kiểm tra trạng thái: đang ở trong từ hay không
+    int count = 0;
+    int inWord = 0; // To track whether we are inside a word
 
-    // Duyệt qua từng ký tự trong chuỗi
     for(int i = 0; s[i] != '\0'; i++)
     {
-        // Kiểm tra nếu ký tự hiện tại không phải là khoảng trắng (space, tab, newline)
-        if(!isspace(s[i])) 
+        if(!isspace(s[i])) // If the character is not a space
         {
-            // Nếu trước đó không phải trong từ, thì bây giờ bắt đầu một từ mới
             if(inWord == 0)
             {
-                wordCount++;  // Tăng số từ lên
-                inWord = 1;   // Đánh dấu đang ở trong một từ
+                count++;  // Increment word count when we enter a new word
+                inWord = 1;
             }
         }
         else
         {
-            inWord = 0;  // Khi gặp khoảng trắng, kết thúc từ
+            inWord = 0;  // We are not in a word anymore
         }
     }
-    return wordCount;  // Trả về tổng số từ đếm được
+    return count;
 }
 
 int main()
 {
-    char text[5000];  // Chuỗi lớn chứa nhiều dòng văn bản
-    char line[1000];  // Biến tạm chứa từng dòng nhập
+    char s[5000];  
+    char line[1000];
 
-    // Khởi tạo chuỗi văn bản rỗng
-    text[0] = '\0';
+    s[0] = '\0';
 
-    // Đọc nhiều dòng văn bản từ người dùng
     while(1)
     {
         fgets(line, sizeof(line), stdin);  // Đọc một dòng nhập từ người dùng
@@ -57,15 +51,17 @@ int main()
             break;  // Thoát khỏi vòng lặp, kết thúc nhập
         }
         
-        strcat(text, line);  // Nối dòng vừa nhập vào chuỗi văn bản
+        strcat(s, line);  // Nối dòng vừa nhập vào chuỗi văn bản
     }
 
     // Gọi hàm đếm từ và in ra kết quả
-    int result = countWords(text);
+    int result = countWords(s);
     printf("%d\n", result);
 
     return 0;
 }
+
+
 
 
 /*
