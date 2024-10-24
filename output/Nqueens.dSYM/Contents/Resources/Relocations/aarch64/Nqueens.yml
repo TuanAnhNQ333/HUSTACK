@@ -1,0 +1,11 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/macbook/Documents/main code/HUSTACK code/output/Nqueens'
+relocations:
+  - { offset: 0x26, size: 0x8, addend: 0x0, symName: _solution, symObjAddr: 0x0, symBinAddr: 0x100003A30, symSize: 0xD8 }
+  - { offset: 0x41, size: 0x8, addend: 0x0, symName: _solution, symObjAddr: 0x0, symBinAddr: 0x100003A30, symSize: 0xD8 }
+  - { offset: 0x9D, size: 0x8, addend: 0x0, symName: _issafe, symObjAddr: 0xD8, symBinAddr: 0x100003B08, symSize: 0x208 }
+  - { offset: 0x151, size: 0x8, addend: 0x0, symName: _solvequeenuntil, symObjAddr: 0x2E0, symBinAddr: 0x100003D10, symSize: 0x124 }
+  - { offset: 0x1A3, size: 0x8, addend: 0x0, symName: _solvequeen, symObjAddr: 0x404, symBinAddr: 0x100003E34, symSize: 0x104 }
+  - { offset: 0x1E7, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x508, symBinAddr: 0x100003F38, symSize: 0x2C }
+...
