@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include<stdbool.h>
 #include<stdlib.h>
-#include<time.h>
 int N;
 void solution(int board[N][N])
 {
@@ -74,8 +73,6 @@ bool solvequeen()
             board[i][j] = 0;
         }
     }
-    int firstrow = rand() % N;
-    board[firstrow][0] = 1;
     for(int i = 0; i < N; i ++)
     {
         board[i][0] = 1;
@@ -89,7 +86,6 @@ bool solvequeen()
 }
 int main()
 {
-    srand(time(NULL));
     scanf("%d", &N);
     printf("%d\n", N);
     solvequeen();
