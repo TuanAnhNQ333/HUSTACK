@@ -1,4 +1,6 @@
-// Cnk = n!/k!*(n-k)! = cn(n-k) => tu nhan voi (n - i), i tang dan, mau nhan voi (i + 1) -> cnk = n*(n-i)/k!(n-k)(n-k-i) i chay tu 1
+
+// thuat toan : rut gon phan (n-k)! o mau so va thuc hien phep cnk = n*(n-1)*...*(n-k+1)/k!
+
 /*
 Viết chương trình nhập vào 2 số k và n, sau đó xuất ra số lượng tổ hợp chập k của n.
 Ví dụ

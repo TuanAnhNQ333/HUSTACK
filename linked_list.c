@@ -234,5 +234,4 @@ addlast 10
 addfirst 1
 addafter 10 4 ; correct ouput : 4 3 2 10
 remove 1
-#
-*/
+#*/
