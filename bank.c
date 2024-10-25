@@ -47,14 +47,14 @@ int main()
     while(1)
     {
         char query[50];
+        char account[MAX_LENGTH];
         if(scanf("%s", query) != 1 || strcmp(query, "#") == 0)
         {
             break;
         }
         if(strncmp(query, "?total_money_transaction_from ", 29) == 0)
         {
-            char account[MAX_LENGTH];
-            sscanf(query + 29, "%s", account);
+            scanf("%s", account);
             int result = total_money_transaction_from(transaction, num_transaction, account);
             printf("%d\n", result);
         }
