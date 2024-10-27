@@ -1,3 +1,5 @@
+// dung hash table 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -61,7 +63,7 @@ int total_money_transaction_from(const char* account) {
         }
         entry = entry->next;
     }
-    return 0; // Nếu không có giao dịch từ tài khoản này
+    return 0;
 }
 
 // Đọc giao dịch và cập nhật tổng tiền

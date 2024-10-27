@@ -3,7 +3,6 @@
 
 int N;
 
-// Hàm in ra giải pháp
 void printSolution(int row[]) {
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
@@ -18,9 +17,8 @@ void printSolution(int row[]) {
     printf("\n");
 }
 
-// Hàm giải quyết bài toán quân hậu
 void solve(int col, int left_diagonal, int right_diagonal, int row[]) {
-    if (col == (1 << N) - 1) {  // Kiểm tra nếu đã đặt quân hậu trên tất cả các cột
+    if (col == (1 << N) - 1) {
         printSolution(row);  // In ra một giải pháp
         return;
     }
@@ -32,7 +30,7 @@ void solve(int col, int left_diagonal, int right_diagonal, int row[]) {
 
         // Tìm hàng để đặt quân hậu
         int row_position = __builtin_ctz(current_spot);
-        row[row_position] = row_position;  // Cập nhật vị trí quân hậu
+        row[row_position] = __builtin_ctz(current_spot);  // Cập nhật vị trí quân hậu
 
         // Gọi đệ quy để tìm quân hậu tiếp theo
         solve(col | current_spot, 
