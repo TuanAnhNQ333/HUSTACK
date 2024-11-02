@@ -1,17 +1,6 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
-// s.push_back('x') : them x vao cuoi string
-// s.pop_back() : xoa ky tu cuoi
-// s.append('x') : noi ky tu hoac string vao cuoi string
-// s.insert(2, 'x') : chen xau x vao vi tri 2 
-// s.erase(6) : xoa ky tu thu 6
-// s.erase(pos) : xoa tat ca ky tu trong xau s tu chi so pos toi cuoi
-// s.erase(pos, n) : xoa n ky tu trong xau s tu chi so pos
-// s.subtr(pos) : tra ve xau con cua s tu pos
-// s.substr(pos, n) : tra ve xau con n ky tu tu chi so pos
-// s.find("x") : tim kiem su xuat hien cua xau con
-
 // struct 1 node trong linked list
 struct Node 
 {
